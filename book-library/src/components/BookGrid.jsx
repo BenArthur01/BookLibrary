@@ -1,6 +1,6 @@
 // Grid wrapper for bood cards.
 
-import BookCard from "./BookCard";
+import BookCard from "./BookCard.jsx";
 
 function BookGrid({ books, onToggleFavorite, onDownload, density }) {
     return (

@@ -12,6 +12,7 @@ import Downloads from './pages/Downloads.jsx';
 import Profile from './pages/Profile.jsx';
 import Settings from './pages/Settings.jsx';
 import BookDetails from './pages/BookDetails.jsx';
+import useLocalStorage from './hooks/useLocalStorage.js';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

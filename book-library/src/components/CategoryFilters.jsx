@@ -14,7 +14,7 @@ const categories = [
 
 function CategoryFilters() {
     const onSelect = (cat) => {
-        window.dispatchEvent(new CustomEvent('b-lib:category', { detail: cat }));
+        window.dispatchEvent(new CustomEvent('booklibrary:category', { detail: cat }));
     };
 
     return (
@@ -32,7 +32,7 @@ function CategoryFilters() {
                 </button>    
             ))}
         </div>
-    )
+    );
 }
 
 export default CategoryFilters;

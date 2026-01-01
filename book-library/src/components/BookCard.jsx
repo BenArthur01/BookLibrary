@@ -5,7 +5,7 @@
 
 import { Link } from 'react-router-dom';
 
-function BookCard({ book, onToggleFavorite, onDownload, density = 'comfortable'}) {
+function BookCard({ book, onToggleFavorite, onDownload, density = 'comfortable' }) {
     const pad = density === 'compact' ? 'p-3' : 'p-4';
 
     return (

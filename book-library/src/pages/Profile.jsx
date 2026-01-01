@@ -1,6 +1,6 @@
 // A Simple page with avatar and favorite list
 
-import useLocalStorage from "../hooks/useLocalStorage";
+import useLocalStorage from "../hooks/useLocalStorage.js";
 import seedBooks from '../data/books.js';
 
 function Profile() {

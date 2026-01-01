@@ -48,9 +48,9 @@ function Library({ gridDensity }) {
             try {
                 // Basic Open Library search by title/author/keywords
                 const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=30`;
-                const res = await fetch(url);
-                if (!res.ok) throw new Error('Failed to fetch from Open Library');
-                const data = await res.json();
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Failed to fetch from Open Library');
+                const data = await response.json();
 
                 const mapped = data.docs.slice(0, 12).map((doc, idx) => {
                     // Prefer cover_i for images; fallback to picsum
@@ -82,9 +82,9 @@ function Library({ gridDensity }) {
                 // For search results, show API data in place of local seed
                 setBooks((previous) => {
                     // Keep local favorites and downloads if same id appears (simple merge strategy)
-                    const favMap = new Map(previous.map((b) => [String(b.id), b]));
+                    const favMap = new Map(previous.map((b) => [String(b.id), b]));   // b means each book in previous...
                     return mapped.map((b) => {
-                        const existing = favMap.get(String(b.id));
+                        const existing = favMap.get(String(b.id));    // b.id means the book unique identifier
                         return existing ? { ...b, isFavorite: existing.isArray, downloadCount: existing.downloadCount } : b;
                     });
                 });               
