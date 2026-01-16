@@ -1,9 +1,9 @@
 // Stictly header with hamburger (mobile), search bar, category chips.
 // Search/category are handled inside Library via props.
 
-import SearchBar from '/SearchBar.jsx';
-import CategoryFilters from '/CategoryFilters.jsx';
-import { useLocation } from '/react-router-dom';
+import SearchBar from "./SearchBar.jsx";
+import CategoryFilters from "./CategoryFilters.jsx";
+import { useLocation } from "react-router-dom";
 
 function Header({ onOpenSidebar }) {
     const location = useLocation();
